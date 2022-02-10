@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+
+// App 이것도 엄연한 컴포넌트임.
 function App() {
 
   // destructuring 문법
@@ -50,8 +52,23 @@ function App() {
         <p>2월 17일 발행</p>
         <hr/>
       </div>
+      <Modal />
+      
+
     </div>
   );
+}
+
+//component 만드는법 (html 코드를 함수처럼). 이름은 
+//return 안에 <div> </div>로 묶기 싫으면 <> </>로 묶기 가능
+function Modal(){
+  return(
+    <div className="modal">
+      <h2>제목</h2>
+      <p2>날짜</p2>
+      <p>상세내용</p>
+    </div>
+  )
 }
 
 export default App;
