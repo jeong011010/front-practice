@@ -7,29 +7,12 @@ body {
   background-color:#ffecc2;
 }
 
-.start{
-  
-}
-
 .modal{
   margin-top:20px;
   padding: 20px;
   background: #eee;
 }
 
-.nav {
-  width: 100%;
-  color: rgb(0, 0, 0);
-  padding: 20px;
-  font-weight: 600;
-  font-size: 20px;
-}
-.list{
-  margin-top: 30px;
-  text-align: left;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 
 .App-logo {
   height: 40vmin;

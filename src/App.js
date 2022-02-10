@@ -1,26 +1,21 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import Nav from './component/Nav/Nav';
+import Startpage from './component/Startpage/Startpage';
+import {BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Mainpage from './component/Mainpage/Main';
 
 function App(){
   return(
     <BrowserRouter>
-    <div className='App'>
-      <Header>
-      <div className='nav'>
-        <div>MBTI 테스트</div>
+      <div className='App'>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Startpage/>}/>
+          <Route path="/main" element={<Mainpage/>}/>
+        </Routes>
       </div>
-      </Header>
-      <switch>
-      <div>
-        <img onClick={()=>{}} src='start-button.png'/>
-      </div>
-      </switch>
-    </div>
     </BrowserRouter>
   );
 }
-
 
 export default App;
