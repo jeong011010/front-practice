@@ -4,6 +4,11 @@
 
 body {
   font-family:'nanumsquare';
+  background-color:#ffecc2;
+}
+
+.start{
+  
 }
 
 .modal{
@@ -12,11 +17,9 @@ body {
   background: #eee;
 }
 
-.black-nav {
-  background: black;
+.nav {
   width: 100%;
-  display: flex;
-  color: white;
+  color: rgb(0, 0, 0);
   padding: 20px;
   font-weight: 600;
   font-size: 20px;
