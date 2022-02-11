@@ -1,0 +1,13 @@
+body{
+    font-weight: 700;
+}
+
+.질문{
+    margin-top: 150px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.답변{
+    margin: 50px;
+}

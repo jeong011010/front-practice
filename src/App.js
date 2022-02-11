@@ -3,6 +3,7 @@ import Nav from './component/Nav/Nav';
 import Startpage from './component/Startpage/Startpage';
 import {BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Mainpage from './component/Mainpage/Main';
+import Finishpage from './component/Finishpage/Finish';
 
 function App(){
   return(
@@ -12,6 +13,7 @@ function App(){
         <Routes>
           <Route path="/" element={<Startpage/>}/>
           <Route path="/main" element={<Mainpage/>}/>
+          <Route path="/finish" element={<Finishpage/>}/>
         </Routes>
       </div>
     </BrowserRouter>
