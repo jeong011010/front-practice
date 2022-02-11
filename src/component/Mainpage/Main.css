@@ -10,4 +10,7 @@ body{
 
 .답변{
     margin: 50px;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid black;
 }
