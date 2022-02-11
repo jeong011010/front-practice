@@ -1,39 +1,43 @@
 import './Main.css';
+import list from "../../db/data.json";
 import { useState } from 'react';
 
-export default function 메인(){
+export default function 메인(props){
 
-    var 질문배열 = ['질문1','질문2','질문3','질문4','질문5','질문6','질문7','질문8','질문9','질문10','질문11','질문12'];
-    var 답1 = ['답변1-1','답변1-2','답변1-3','답변1-4','답변1-5','답변1-6','답변1-7','답변1-8','답변1-9','답변1-10','답변1-11','답변1-12'];
-    var 답2 = ['답변2-1','답변2-2','답변2-3','답변2-4','답변2-5','답변2-6','답변2-7','답변2-8','답변2-9','답변2-10','답변2-11','답변2-12'];
-    let [질문, 질문변경] = useState(질문배열[0]);
-    let [답변1, 답변1변경] = useState(답1[0]);
-    let [답변2, 답변2변경] = useState(답2[0]);
-    
+    let [질문, 질문변경] = useState(list.질문[0].내용);
+    let [답변1, 답변1변경] = useState(list.답변1[0].내용);
+    let [답변2, 답변2변경] = useState(list.답변2[0].내용);
+    const [mbti, setmbti] = useState([0,0,0,0,0,0,0,0,0,0,0,0]);
+
     const [n,setn] = useState(1);
-
-    function 다음질문(){
-        setn(n+1);
-        if(n>11) 
-            window.location.href='/finish';
-        else{
-            console.log(n);
-            질문변경(질문배열[n]);
-            답변1변경(답1[n]);
-            답변2변경(답2[n]);
+    
+    const 다음질문 = i => {
+        
+        let arr = [...mbti];
+        console.log(i);
+        arr[n-1]=i;
+        setmbti(arr);
+        if(n>11){
+            window.history.pushState(mbti,'','/finish');
+            window.location.replace("/finish");
         }
+        else{
+            질문변경(list.질문[n].내용);
+            답변1변경(list.답변1[n].내용);
+            답변2변경(list.답변2[n].내용);
+        }
+        setn(n+1);
     }
 
     return(
         <>
             <div className='질문'>{질문}</div>
-            <div className='답변' onClick={다음질문}>
+            <div className='답변' onClick={()=>{다음질문(0); list.질문[n].mbti=0;}}>
                 {답변1}
             </div>
-            <div className='답변' onClick={다음질문}>
+            <div className='답변' onClick={()=>{다음질문(1); list.질문[n].mbti=1;}}>
                 {답변2}
             </div>
-
         </>
     );
 }

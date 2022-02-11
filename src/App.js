@@ -4,8 +4,10 @@ import Startpage from './component/Startpage/Startpage';
 import {BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Mainpage from './component/Mainpage/Main';
 import Finishpage from './component/Finishpage/Finish';
+import React, {component, useState} from "react";
 
 function App(){
+
   return(
     <BrowserRouter>
       <div className='App'>
