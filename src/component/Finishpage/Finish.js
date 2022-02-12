@@ -11,7 +11,7 @@ export default function 끝 (){
         for(let j=0;j<4;j++){
             let num=0;
             for(let i=0;i<3;i++){
-                num+=mbti[(j*2)+i];
+                num+=mbti[(j*3)+i];
             }
             if(num>1){
                 arr[j]=ans+속성[(j*2)+1];
@@ -25,7 +25,6 @@ export default function 끝 (){
 
     return(
         <>
-
             <button onClick={mbti검사}>결과</button>
             <p>{ans}</p>
         </>
