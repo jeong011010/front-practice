@@ -31,6 +31,7 @@ export default function 메인(props){
 
     return(
         <>
+            <div className='항목개수'>{n}/12</div>
             <div className='질문'>{질문}</div>
             <div className='답변' onClick={()=>{다음질문(0); list.질문[n].mbti=0;}}>
                 {답변1}
